@@ -1,24 +1,29 @@
+// moduli di angular
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+
+// componenti creati
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { MainComponent } from './main/main.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './component/header/header.component';
+import { ListComponent } from './component/list/list.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainComponent
+    ListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    HttpClientModule
   ],
   providers: [],
+  //componente con cui inizia
   bootstrap: [AppComponent]
 })
 export class AppModule { }

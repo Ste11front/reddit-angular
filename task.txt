@@ -1,7 +1,6 @@
 Rifare reddit viewer per singolo subreddit
 Ogni card del post deve avere un button per cancellarlo
 Avere un menù a tendina che faccia scegliere tra hot, top e new. E che cambi la chiamata
-
-- Facoltativo -
+La card deve essere contenuta in un card component
 Avere un button per ogni post che permetta di segnarli come preferiti e avere una pagina apposita che
 permetta di visualizzare i post preferiti
