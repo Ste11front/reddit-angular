@@ -6,8 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 // componenti creati
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './component/header/header.component';
-import { ListComponent } from './component/list/list.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ListComponent } from './components/list/list.component';
+import { CardComponent } from './components/card/card.component';
+import { TimestampToDatePipe } from './pipes/timestamp-to-date.pipe';
 
 
 
@@ -15,7 +17,9 @@ import { ListComponent } from './component/list/list.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    ListComponent
+    ListComponent,
+    CardComponent,
+    TimestampToDatePipe
   ],
   imports: [
     BrowserModule,
