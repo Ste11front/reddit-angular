@@ -5,8 +5,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimestampToDatePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: number, hasTime:boolean = true): string {
+    const millisecond = value * 1000;
+    const date = new Date(millisecond);
+    let dateString = date.getDate()
+                       + '/' + (date.getMonth() + 1)
+                       + '/' + date.getFullYear();
+
+    if(hasTime){
+      dateString += ' ore: ' + date.getHours()
+                    + ':' + (date.getMinutes().toString().length > 1 ? date.getMinutes() : ('0' + date.getMinutes()));
+    }
+    return dateString;
   }
 
 }

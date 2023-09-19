@@ -1,1 +1,5 @@
-<p>favourites works!</p>
+<ul>
+  <li *ngFor="let post of favourites">
+    <app-card [postData]="post" [isFavourite]="true" bColor="green"></app-card>
+  </li>
+</ul>
